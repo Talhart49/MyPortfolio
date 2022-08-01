@@ -32,7 +32,7 @@ const Skills = () => {
     },
     {
       title: 'Bachelors',
-      institute: 'COMSATS, Islamabad',
+      institute: 'COMSATS University, Islamabad',
       year: '09/2019 - Present',
     },
   ];
@@ -40,8 +40,8 @@ const Skills = () => {
 
   const [letterClass, setLetterClass] = useState('text-animate');
 
-  const skills = ['S', 'k', 'i', 'l', 'l', 's', ' '];
-  const studies = [' ', 'S', 't', 'u', 'd', 'i', 'e', 's'];
+  const skills = ['P', 'e', 'r', 's', 'o', 'n', 'a', 'l', ' '];
+  const studies = ['I', 'n', 'f', 'o', 'r', 'm', 'a', 't', 'i', 'o', 'n'];
 
   useEffect(() => {
     // const query = '*[_type == "experiences"]';
@@ -72,7 +72,7 @@ const Skills = () => {
             idx={1}
           />
         </span>
-        &
+
         <span>
           <AnimatedLetters
             letterClass={letterClass}

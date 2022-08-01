@@ -49,9 +49,8 @@ const Work = () => {
 
   return (
     <>
-      <h2 className='head-text'>
-        My Creative{' '}
-        <span>
+      <h2 className='text'>
+        <span className='port'>
           <AnimatedLetters
             letterClass={letterClass}
             strArray={portfolio}
@@ -62,7 +61,7 @@ const Work = () => {
       </h2>
 
       <div className='app__work-filter'>
-        {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map(
+        {['React JS', 'React Native', 'Web', 'Python', 'All'].map(
           (item, index) => (
             <div
               key={index}

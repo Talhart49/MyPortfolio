@@ -23,7 +23,7 @@ const Header = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
   const intro = ['H', 'e', 'l', 'l', 'o', ',', ' I', ' ', 'a', 'm'];
-  const nameArray = ['T', 'A', 'L', 'H', 'A'];
+  const nameArray = ['R', 'A', 'N', 'A', ' ', 'T', 'A', 'L', 'H', 'A'];
   const jobArray1 = [
     'W',
     'E',
