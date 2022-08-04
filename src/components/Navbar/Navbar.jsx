@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
-import { images } from '../../constants';
+import Resume from '../../assets/Resume.pdf';
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -14,12 +14,20 @@ const Navbar = () => {
         <h1>TALHA</h1>
       </div>
       <ul className='app__navbar-links'>
-        {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-          <li className='app__flex p-text' key={`link-${item}`}>
-            <div />
-            <a href={`#${item}`}>{item}</a>
-          </li>
-        ))}
+        {['home', 'about', 'work', 'skills', 'contact', 'Resume'].map(
+          (item) => (
+            <li className='app__flex p-text' key={`link-${item}`}>
+              <div />
+              {item === 'Resume' ? (
+                <a href={Resume} target='_blank' rel='noreferrer'>
+                  {item}
+                </a>
+              ) : (
+                <a href={`#${item}`}>{item}</a>
+              )}
+            </li>
+          )
+        )}
       </ul>
 
       <div className='app__navbar-menu'>
