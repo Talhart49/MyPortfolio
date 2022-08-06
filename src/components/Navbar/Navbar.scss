@@ -30,10 +30,11 @@
     color: #0f0e09;
 
     &:hover {
-      animation: hinge 1.5s;
+      animation: hinge 2.5s;
       background-image: linear-gradient(60deg, #ffea03d9, #000000);
       background-clip: text;
       color: transparent;
+      cursor: none;
     }
   }
 }
@@ -63,7 +64,7 @@
     }
 
     a {
-      color: var(--gray-color);
+      color: #2b2c2e;
       text-decoration: none;
       flex-direction: column;
 

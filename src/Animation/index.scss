@@ -1,0 +1,12 @@
+.anim {
+  width: 80%;
+  height: 50%;
+  position: absolute;
+  margin-top: 16%;
+
+  @media screen and (max-width: 600px) {
+    width: 90%;
+    height: 80vh;
+    padding-bottom: 26%;
+  }
+}
