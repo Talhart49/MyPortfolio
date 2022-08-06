@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
-import "./style.css";
+import './style.css';
 
 const Cursor = () => {
   const delay = 10;
@@ -19,20 +19,20 @@ const Cursor = () => {
   const requestRef = useRef(null);
 
   useEffect(() => {
-    document.addEventListener("mousedown", mouseOverEvent);
-    document.addEventListener("mouseup", mouseOutEvent);
-    document.addEventListener("mousemove", mouseMoveEvent);
-    document.addEventListener("mouseenter", mouseEnterEvent);
-    document.addEventListener("mouseleave", mouseLeaveEvent);
+    document.addEventListener('mousedown', mouseOverEvent);
+    document.addEventListener('mouseup', mouseOutEvent);
+    document.addEventListener('mousemove', mouseMoveEvent);
+    document.addEventListener('mouseenter', mouseEnterEvent);
+    document.addEventListener('mouseleave', mouseLeaveEvent);
 
     animateDotOutline();
 
     return () => {
-      document.removeEventListener("mousedown", mouseOverEvent);
-      document.removeEventListener("mouseup", mouseOutEvent);
-      document.removeEventListener("mousemove", mouseMoveEvent);
-      document.removeEventListener("mouseenter", mouseEnterEvent);
-      document.removeEventListener("mouseleave", mouseLeaveEvent);
+      document.removeEventListener('mousedown', mouseOverEvent);
+      document.removeEventListener('mouseup', mouseOutEvent);
+      document.removeEventListener('mousemove', mouseMoveEvent);
+      document.removeEventListener('mouseenter', mouseEnterEvent);
+      document.removeEventListener('mouseleave', mouseLeaveEvent);
 
       cancelAnimationFrame(requestRef.current);
     };
@@ -50,11 +50,11 @@ const Cursor = () => {
 
   const toggleCursorSize = () => {
     if (cursorEnlarged.current) {
-      dot.current.style.transform = "translate(-50%, -50%) scale(0.75)";
-      dotOutline.current.style.transform = "translate(-50%, -50%) scale(1.5)";
+      dot.current.style.transform = 'translate(-50%, -50%) scale(0.75)';
+      dotOutline.current.style.transform = 'translate(-50%, -50%) scale(1.5)';
     } else {
-      dot.current.style.transform = "translate(-50%, -50%) scale(1)";
-      dotOutline.current.style.transform = "translate(-50%, -50%) scale(1)";
+      dot.current.style.transform = 'translate(-50%, -50%) scale(1)';
+      dotOutline.current.style.transform = 'translate(-50%, -50%) scale(1)';
     }
   };
 
@@ -85,16 +85,16 @@ const Cursor = () => {
     endX.current = e.pageX;
     endY.current = e.pageY;
 
-    dot.current.style.top = endY.current + "px";
-    dot.current.style.left = endX.current + "px";
+    dot.current.style.top = endY.current + 'px';
+    dot.current.style.left = endX.current + 'px';
   };
 
   const animateDotOutline = () => {
     _x.current += (endX.current - _x.current) / delay;
     _y.current += (endY.current - _y.current) / delay;
 
-    dotOutline.current.style.top = _y.current + "px";
-    dotOutline.current.style.left = _x.current + "px";
+    dotOutline.current.style.top = _y.current + 'px';
+    dotOutline.current.style.left = _x.current + 'px';
 
     requestRef.current = requestAnimationFrame(animateDotOutline);
   };
