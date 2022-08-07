@@ -13,8 +13,8 @@ const Cursor = () => {
 
   const endX = useRef(window.innerWidth / 2);
   const endY = useRef(window.innerHeight / 2);
-  const _x = useRef(0);
-  const _y = useRef(0);
+  const x = useRef(0);
+  const y = useRef(0);
 
   const requestRef = useRef(null);
 
@@ -90,11 +90,11 @@ const Cursor = () => {
   };
 
   const animateDotOutline = () => {
-    _x.current += (endX.current - _x.current) / delay;
-    _y.current += (endY.current - _y.current) / delay;
+    x.current += (endX.current - x.current) / delay;
+    y.current += (endY.current - y.current) / delay;
 
-    dotOutline.current.style.top = _y.current + 'px';
-    dotOutline.current.style.left = _x.current + 'px';
+    dotOutline.current.style.top = y.current + 'px';
+    dotOutline.current.style.left = x.current + 'px';
 
     requestRef.current = requestAnimationFrame(animateDotOutline);
   };

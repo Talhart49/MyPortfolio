@@ -1,5 +1,5 @@
 import './index.scss';
-import React from 'react';
+import React, { Suspense, useCallback, useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import {
@@ -10,7 +10,7 @@ import {
   useThree,
 } from 'react-three-fiber';
 import circleImg from '../assets/circle.png';
-import { Suspense, useCallback, useMemo, useRef } from 'react';
+
 extend({ OrbitControls });
 
 function CameraControls() {
@@ -37,7 +37,7 @@ function Points({ aa, tt }) {
   const bufferRef = useRef();
 
   let t = 0;
-  let f = 0.002;
+  const f = 0.002;
   let a = 3;
   const graph = useCallback(
     (x, z) => {
