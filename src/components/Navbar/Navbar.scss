@@ -120,7 +120,7 @@
 
     padding: 1rem;
 
-    width: 80%;
+    width: 60%;
     height: 100vh;
 
     display: flex;
@@ -165,7 +165,7 @@
           text-transform: uppercase;
           font-weight: 500;
 
-          transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-out;
 
           &:hover {
             color: var(--secondary-color);
