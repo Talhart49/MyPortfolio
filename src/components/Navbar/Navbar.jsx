@@ -34,9 +34,7 @@ const Navbar = () => {
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
         {toggle && (
-          <motion.div
-            whileInView={{ x: [-200, 0] }}
-            transition={{ duration: 0.85, ease: 'easeInOut', delay: 0 }}>
+          <motion.div className='addTransition'>
             <HiX onClick={() => setToggle(false)} />
             <ul>
               {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
