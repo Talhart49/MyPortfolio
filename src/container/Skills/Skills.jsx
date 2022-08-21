@@ -21,11 +21,6 @@ const Skills = () => {
   // const [experiences, setExperiences] = useState([]);
   const experiences = [
     {
-      title: 'Matriculation',
-      institute: 'Fazaia Degree College, MRF',
-      year: '06/2015 - 06/2017',
-    },
-    {
       title: 'Intermediate',
       institute: 'Fazaia Degree College, MRF',
       year: '07/2017 - 07/2019',
